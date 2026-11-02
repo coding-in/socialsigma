@@ -22,6 +22,7 @@
     <!-- Styling Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/hero-bold.css">
   
   <!-- FontAwesome for Premium Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -149,158 +150,116 @@
   </header>
 
   <!-- --- Hero Section --- -->
-  <section class="hero" id="hero">
-    <div class="motion-hero-stage" aria-hidden="true">
-      <div class="motion-hero-grid"></div>
-      <div class="motion-hero-halo"><div class="motion-hero-orbit"></div><div class="motion-hero-orbit motion-hero-orbit--inner"></div></div>
-      <div class="motion-hero-sweep"></div>
-      <span class="motion-hero-code">SOCIAL SIGMA / DIGITAL FIRST / CREATIVE ALWAYS</span>
+  <section class="hero bold-hero" id="hero" aria-labelledby="bold-hero-title">
+    <div class="bold-hero__scene" aria-hidden="true">
+      <span class="bold-hero__ambient bold-hero__ambient--blue"></span>
+      <span class="bold-hero__ambient bold-hero__ambient--lime"></span>
+      <span class="bold-hero__grid"></span>
+      <span class="bold-hero__cross bold-hero__cross--one">+</span>
+      <span class="bold-hero__cross bold-hero__cross--two">+</span>
+      <span class="bold-hero__cross bold-hero__cross--three">+</span>
     </div>
-    <div class="motion-hero-side" aria-hidden="true">
-      STRATEGY <span class="motion-dash"></span> DESIGN <span class="motion-dash"></span> PERFORMANCE
+
+    <div class="bold-hero__masthead" aria-hidden="true">
+      <span><span class="bold-hero__masthead-icon">✳</span> SOCIAL SIGMA / CREATIVE GROWTH STUDIO</span>
+      <span>INDEPENDENT MINDS. GLOBAL AMBITION. <span class="bold-hero__masthead-mark">↗</span></span>
     </div>
-    <div class="hero-bg-blobs">
-      <div class="blob blob-blue" id="blob-1"></div>
-      <div class="blob blob-lime" id="blob-2"></div>
-    </div>
-    
-    <div class="hero-container">
-      <div class="hero-content reveal-item">
-        <div class="motion-hero-live" aria-hidden="true">
-          <span class="motion-live-light"></span><strong>IDEAS IN MOTION</strong>
-          <span class="motion-bar"></span> CREATIVE &times; PERFORMANCE
+
+    <div class="bold-hero__layout">
+      <div class="bold-hero__copy">
+        <div class="bold-hero__eyebrow">
+          <span class="bold-hero__pulse"></span>
+          CREATIVE THINKING. REAL-WORLD IMPACT.
+          <span class="bold-hero__eyebrow-no">/ 001</span>
         </div>
-        <div class="hero-tag">
-          <span></span> Gurgaon's Best Creative Marketing Agency
-        </div>
-        <h1 class="hero-title">
-          Dikhega tabhi toh<br>
-          <span class="lime-glow">Bikega.</span>
+
+        <h1 class="bold-hero__headline" id="bold-hero-title">
+          <span class="bold-hero__headline-line"><span class="bold-hero__headline-word">MAKE YOUR</span></span>
+          <span class="bold-hero__headline-line bold-hero__headline-line--brand">
+            <span class="bold-hero__headline-word">BRAND</span>
+            <span class="bold-hero__headline-burst" aria-hidden="true">✳</span>
+          </span>
+          <span class="bold-hero__headline-line bold-hero__headline-line--final"><span class="bold-hero__headline-word">UNMISSABLE<span class="bold-hero__headline-period">.</span></span></span>
         </h1>
-        <p class="hero-desc">
-          We craft future-ready brands through a perfect fusion of creative content, performance marketing, and data-driven scaling strategies.
-        </p>
-        <div class="hero-ctas">
-          <button class="btn-primary" id="hero-cta-get-started" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
-            Get Started <i class="fas fa-rocket"></i>
-          </button>
-          <button class="btn-secondary" id="hero-cta-view-work" onclick="window.location.href='portfolio.html'">
-            View Work <i class="fas fa-location-arrow"></i>
-          </button>
+
+        <div class="bold-hero__intro-row">
+          <div class="bold-hero__intro-rule" aria-hidden="true"></div>
+          <p class="bold-hero__intro">We turn bold ideas into magnetic brands through scroll-stopping content, powerful digital experiences, and performance-led marketing.</p>
         </div>
-        
-        <div class="hero-socials">
-          <span class="hero-social-label">Follow Us</span>
-          <div class="hero-social-links">
-            <a href="https://www.facebook.com/socialsigma.in" target="_blank" class="hero-social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/socialsigma.in/" target="_blank" class="hero-social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.behance.net/social_sigma" target="_blank" class="hero-social-link" aria-label="Behance"><i class="fab fa-behance"></i></a>
-          </div>
+
+        <div class="bold-hero__actions">
+          <a class="bold-hero__cta bold-hero__cta--primary" href="#contact" id="hero-cta-get-started">
+            <span>LET'S BUILD SOMETHING</span>
+            <span class="bold-hero__cta-icon" aria-hidden="true"><i class="fas fa-arrow-up-right-from-square"></i></span>
+          </a>
+          <a class="bold-hero__cta bold-hero__cta--secondary" href="portfolio.html" id="hero-cta-view-work">
+            EXPLORE OUR WORK <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="bold-hero__signature" aria-label="Core services">
+          <span class="bold-hero__signature-symbol" aria-hidden="true">✷</span>
+          <span>STRATEGY <i></i> CONTENT <i></i> PERFORMANCE <i></i> CULTURE</span>
         </div>
       </div>
-      
-      <!-- Interactive Dashboard Panels with Live Analytics & Meta Ads Manager Simulation -->
-      <div class="hero-image-wrap reveal-item reveal-delay-2">
-        <div class="hero-dashboard-container" id="hero-dashboard">
-          
-          <!-- Panel 1: Main Analytics Graph Panel -->
-          <div class="dashboard-panel panel-main" data-speed="1.2" id="hero-panel-main">
-            <div class="panel-header">
-              <div class="window-dots">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-              </div>
-              <span class="panel-title">Sigma Real-time Analytics</span>
-              <span class="panel-status-live"><span class="pulse-dot"></span> Live</span>
-            </div>
-            <div class="panel-body">
-              <div class="main-chart-container">
-                <div class="chart-legend">
-                  <span><i class="fas fa-circle text-blue"></i> Paid Traffic</span>
-                  <span><i class="fas fa-circle text-lime"></i> Conversions</span>
-                </div>
-                <!-- Animated Line SVG Graph -->
-                <svg class="analytics-svg-chart" viewBox="0 0 500 200" preserveAspectRatio="none">
-                  <defs>
-                    <linearGradient id="glow-grad-blue" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#1877F2" stop-opacity="0.4"/>
-                      <stop offset="100%" stop-color="#1877F2" stop-opacity="0"/>
-                    </linearGradient>
-                    <linearGradient id="glow-grad-lime" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#c1ff72" stop-opacity="0.3"/>
-                      <stop offset="100%" stop-color="#c1ff72" stop-opacity="0"/>
-                    </linearGradient>
-                  </defs>
-                  <!-- Blue Line (Traffic) -->
-                  <path class="chart-path-blue" d="M 0,160 Q 80,120 160,150 T 320,80 T 480,40" fill="none" stroke="#1877F2" stroke-width="3" />
-                  <path class="chart-area-blue" d="M 0,160 Q 80,120 160,150 T 320,80 T 480,40 L 480,200 L 0,200 Z" fill="url(#glow-grad-blue)" />
-                  
-                  <!-- Lime Line (Conversions) -->
-                  <path class="chart-path-lime" d="M 0,180 Q 70,160 140,110 T 280,140 T 480,25" fill="none" stroke="#c1ff72" stroke-width="4" />
-                  <path class="chart-area-lime" d="M 0,180 Q 70,160 140,110 T 280,140 T 480,25 L 480,200 L 0,200 Z" fill="url(#glow-grad-lime)" />
-                  
-                  <!-- Pulse Marker Dot -->
-                  <circle cx="480" cy="25" r="5" fill="#c1ff72" class="chart-marker-pulse" />
-                </svg>
-              </div>
-            </div>
-            <div class="panel-footer">
-              <div class="footer-stat">
-                <span class="stat-label">Active Users</span>
-                <span class="stat-value" id="dashboard-active-users">2,480</span>
-              </div>
-              <div class="footer-stat">
-                <span class="stat-label">Daily Reach</span>
-                <span class="stat-value" id="dashboard-daily-reach">452.8K</span>
-              </div>
-            </div>
-          </div>
 
-          <!-- Panel 2: Meta Ads Manager Campaign Panel (Overlapping Top Right) -->
-          <div class="dashboard-panel panel-ads" data-speed="1.8" id="hero-panel-ads">
-            <div class="panel-header">
-              <i class="fab fa-facebook text-blue"></i>
-              <span class="panel-title">Campaign: Scaling_ScaleUp</span>
-              <span class="campaign-badge-active">Active</span>
-            </div>
-            <div class="panel-body">
-              <div class="ads-quick-metrics">
-                <div class="quick-metric">
-                  <span class="q-label">Amount Spent</span>
-                  <span class="q-value text-white" id="meta-spend">$12,482.40</span>
-                </div>
-                <div class="quick-metric">
-                  <span class="q-label">ROAS</span>
-                  <span class="q-value text-lime">5.82x</span>
-                </div>
-              </div>
-              <div class="ads-progress-meters">
-                <div class="meter-row">
-                  <div class="meter-labels">
-                    <span>CTR: <span class="text-lime">4.2%</span></span>
-                    <span>Impressions: <span id="meta-impressions">82,450</span></span>
-                  </div>
-                  <div class="meter-bar-track">
-                    <div class="meter-bar-fill" style="width: 78%;"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="bold-hero__showcase" aria-label="Animated illustration of creative brand campaigns and marketing concepts">
+        <div class="bold-hero__showcase-glow" aria-hidden="true"></div>
+        <div class="bold-hero__orbit bold-hero__orbit--outer" aria-hidden="true"></div>
+        <div class="bold-hero__orbit bold-hero__orbit--inner" aria-hidden="true"></div>
+        <span class="bold-hero__showcase-coordinate" aria-hidden="true">CREATIVE FREQUENCY / 001—∞</span>
 
-          <!-- Panel 3: Leads & ROI Float Badge (Overlapping Bottom Left) -->
-          <div class="dashboard-panel panel-badge" data-speed="0.8" id="hero-panel-badge">
-            <div class="badge-icon-wrap">
-              <i class="fas fa-arrow-trend-up text-lime"></i>
-            </div>
-            <div class="badge-details">
-              <span class="badge-label">Avg CPA Saved</span>
-              <span class="badge-value">-32.4%</span>
-            </div>
+        <div class="bold-hero__artboard bold-hero__parallax-layer" data-hero-depth="1">
+          <div class="bold-hero__artboard-head">
+            <span class="bold-hero__artboard-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>SOCIAL SIGMA / DESIGN LAB</span>
+            <span>SS—01</span>
           </div>
-
+          <div class="bold-hero__artboard-body">
+            <span class="bold-hero__artboard-sun" aria-hidden="true"></span>
+            <span class="bold-hero__artboard-ring" aria-hidden="true"></span>
+            <span class="bold-hero__artboard-shape" aria-hidden="true"></span>
+            <span class="bold-hero__artboard-mini">THE ART OF ATTENTION</span>
+            <span class="bold-hero__artboard-title">STOP<br>THE<br><em>SCROLL.</em></span>
+            <span class="bold-hero__artboard-arrow" aria-hidden="true">↗</span>
+            <span class="bold-hero__artboard-bottom">IDEAS THAT INTERRUPT THE ORDINARY <span>© SS</span></span>
+          </div>
         </div>
+
+        <div class="bold-hero__floating bold-hero__floating--idea bold-hero__parallax-layer" data-hero-depth="1.55">
+          <span class="bold-hero__floating-index">01 / OUR MINDSET</span>
+          <strong>THINK<br><em>BIGGER.</em></strong>
+          <span class="bold-hero__floating-tiny">NO BORING BRANDS ALLOWED.</span>
+          <span class="bold-hero__floating-arrow" aria-hidden="true">↗</span>
+        </div>
+
+        <div class="bold-hero__floating bold-hero__floating--signal bold-hero__parallax-layer" data-hero-depth=".65">
+          <span class="bold-hero__floating-index">02 / THE APPROACH</span>
+          <strong>CREATIVE<br>MEETS<br>PERFORMANCE.</strong>
+          <div class="bold-hero__signal-lines" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <span class="bold-hero__sticker bold-hero__parallax-layer" data-hero-depth="2" aria-hidden="true">
+          MADE TO<br>STAND OUT <span>↗</span>
+        </span>
+        <div class="bold-hero__sparkle bold-hero__sparkle--one" aria-hidden="true">✳</div>
+        <div class="bold-hero__sparkle bold-hero__sparkle--two" aria-hidden="true">✳</div>
+      </div>
+    </div>
+
+    <div class="bold-hero__bottom">
+      <a class="bold-hero__scroll-prompt" href="#about">
+        <span class="bold-hero__scroll-arrow" aria-hidden="true">↓</span> SCROLL TO EXPLORE
+      </a>
+      <div class="bold-hero__availability"><span class="bold-hero__pulse"></span> OPEN FOR BOLD COLLABORATIONS</div>
+    </div>
+
+    <div class="bold-hero__ticker" aria-label="Our creative services">
+      <div class="bold-hero__ticker-track" aria-hidden="true">
+        <span>BRAND STRATEGY <b>✳</b> SOCIAL MEDIA <b>✳</b> CONTENT PRODUCTION <b>✳</b> PERFORMANCE MARKETING <b>✳</b> DIGITAL EXPERIENCES <b>✳</b></span>
+        <span>BRAND STRATEGY <b>✳</b> SOCIAL MEDIA <b>✳</b> CONTENT PRODUCTION <b>✳</b> PERFORMANCE MARKETING <b>✳</b> DIGITAL EXPERIENCES <b>✳</b></span>
       </div>
     </div>
   </section>
@@ -605,6 +564,7 @@
   <!-- Main application script -->
   <script src="js/app.js"></script>
   <script src="js/motion.js"></script>
+  <script src="js/hero-bold.js"></script>
 
 </body>
 </html>
