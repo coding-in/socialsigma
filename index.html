@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/motion.css">
   <link rel="stylesheet" href="css/hero-bold.css">
+  <link rel="stylesheet" href="css/testimonials-v2.css">
   
   <!-- FontAwesome for Premium Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -455,25 +456,33 @@
   </section>
 
   <!-- --- Client Reviews Testimonials --- -->
-  <section class="section-padding testimonials" id="testimonials">
+  <section class="section-padding testimonials" id="testimonials" aria-labelledby="reviews-title">
     <div class="container">
-      <div class="section-header reveal-item">
-        <span class="section-tag">Testimonials</span>
-        <h2 class="section-title">Words of Thanks !! 🤩</h2>
-        <p class="section-desc">Feedback from key founders and managers we collaborate with.</p>
+      <div class="section-header review-section-head reveal-item">
+        <div class="review-section-heading">
+          <span class="review-kicker">Client feedback</span>
+          <h2 class="section-title" id="reviews-title">Words of <span class="review-title-accent">Thanks.</span></h2>
+          <p class="section-desc">The conversations, collaboration, and creative work behind every meaningful result.</p>
+        </div>
+        <div class="review-header-aside" aria-hidden="true">
+          <span class="review-aside-mark">“</span>
+          GOOD WORK SPEAKS FOR ITSELF.
+        </div>
       </div>
-      
-      <div class="portfolio-slider-container reveal-item">
+
+      <div class="portfolio-slider-container review-slider-shell reveal-item" aria-label="Client feedback carousel">
         <div class="slider-wrapper">
-          <div class="testimonials-track" id="testimonials-mount">
-            <!-- Testimonials loaded via js/data/testimonials.js -->
+          <div class="testimonials-track" id="testimonials-mount" aria-live="polite">
+            <!-- Original review text rendered from js/data/testimonials.js; no personal names -->
           </div>
         </div>
-        
-        <div class="slider-controls">
-          <button class="btn-slider" id="btn-test-prev" aria-label="Previous Review"><i class="fas fa-chevron-left"></i></button>
-          <div class="slider-dots" id="test-dots"></div>
-          <button class="btn-slider" id="btn-test-next" aria-label="Next Review"><i class="fas fa-chevron-right"></i></button>
+        <div class="slider-controls review-controls">
+          <div class="review-count" aria-hidden="true"><span class="review-count-current" id="review-current">01</span><span>/</span><span id="review-total">05</span></div>
+          <div class="review-controls-right">
+            <button class="btn-slider" id="btn-test-prev" aria-label="Previous review"><i class="fas fa-arrow-left"></i></button>
+            <div class="slider-dots" id="test-dots" aria-label="Choose review"></div>
+            <button class="btn-slider" id="btn-test-next" aria-label="Next review"><i class="fas fa-arrow-right"></i></button>
+          </div>
         </div>
       </div>
     </div>
