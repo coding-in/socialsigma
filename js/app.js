@@ -501,20 +501,32 @@ function renderPortfolio() {
 function renderTestimonials() {
   const mount = document.getElementById('testimonials-mount');
   if (!mount || !window.testimonialsData) return;
-  
-  mount.innerHTML = window.testimonialsData.map(t => `
-    <div class="testimonial-card">
-      <p class="testimonial-text">${t.text}</p>
-      <div class="testimonial-client">
-        <div class="client-avatar">
-          <img src="${t.avatar}" alt="${t.name}" loading="lazy">
-        </div>
-        <div class="client-info">
-          <h4>${t.name}</h4>
-          <p>${t.title}</p>
-        </div>
+
+  // Intentionally omit all personal names, portraits and job titles.
+  // Preserve each original testimonial quotation unchanged.
+  const categories = [
+    'Hospitality & Events',
+    'Fashion & Retail',
+    'Interior Design',
+    'Creative Production',
+    'Sportswear & Activewear'
+  ];
+  mount.innerHTML = window.testimonialsData.map((t, index) => `
+    <article class="testimonial-card" aria-label="Client feedback ${index + 1}">
+      <div class="review-card-head">
+        <span class="review-quote-icon" aria-hidden="true">“</span>
+        <span class="review-card-index">FEEDBACK / ${String(index + 1).padStart(2, '0')}</span>
       </div>
-    </div>
+      <p class="testimonial-text">${t.text}</p>
+      <div class="review-card-footer">
+        <div class="review-card-footer-main">
+          <span class="review-card-accent" aria-hidden="true">✳</span>
+          <div><div class="review-card-category">${categories[index] || 'Client Feedback'}</div>
+          <span class="review-card-caption">Client perspective</span></div>
+        </div>
+        <span class="review-card-end" aria-hidden="true">↗</span>
+      </div>
+    </article>
   `).join('');
 }
 
@@ -701,6 +713,13 @@ function initSliders() {
       
       track.style.transform = `translateX(-${offset}px)`;
       
+      if (trackId === 'testimonials-mount') {
+        const current = document.getElementById('review-current');
+        const total = document.getElementById('review-total');
+        if (current) current.textContent = String(currentIdx + 1).padStart(2, '0');
+        if (total) total.textContent = String(cardsCount).padStart(2, '0');
+      }
+
       // Update active dots
       const dots = dotsContainer.querySelectorAll('.slider-dot');
       dots.forEach((dot, idx) => {
@@ -717,7 +736,9 @@ function initSliders() {
       const dotCount = Math.max(1, cardsCount - cardsPerView + 1);
       
       for (let i = 0; i < dotCount; i++) {
-        const dot = document.createElement('div');
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
         dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
         dot.addEventListener('click', () => {
           currentIdx = i;
