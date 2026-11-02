@@ -164,12 +164,26 @@ function initIntroLoader() {
   const flame = document.getElementById('rocket-flame-element');
   
   if (!loader || !canvas || !rocket) return;
+  // Full rocket sequence plays once per tab session; honor accessibility settings.
+  const lessMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let seen = false;
+  try { seen = sessionStorage.getItem('socialsigma-intro-seen') === '1'; } catch (_) {}
+  if (lessMotion || seen) {
+    loader.classList.add('fade-out');
+    const wrapper = document.getElementById('app-wrapper');
+    if (wrapper) wrapper.classList.add('revealed');
+    animateHeroGraph();
+    return;
+  }
+  try { sessionStorage.setItem('socialsigma-intro-seen', '1'); } catch (_) {}
+
 
   const ps = new LaunchParticleSystem(canvas);
   let progress = 0;
   let hasBlasted = false;
 
   function tick() {
+    if (loader.classList.contains('fade-out')) return;
     ps.update();
     ps.draw();
     requestAnimationFrame(tick);
@@ -196,7 +210,7 @@ function initIntroLoader() {
     return { x, y };
   }
 
-  const duration = 4400;
+  const duration = 2900;
   const startTime = performance.now();
 
   function updateTimeline(time) {
